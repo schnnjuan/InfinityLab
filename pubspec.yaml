@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flame: ^1.29.0
+  audioplayers: ^6.5.0
 
 dev_dependencies:
   flutter_test:
