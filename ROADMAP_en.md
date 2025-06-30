@@ -1,30 +1,60 @@
-# Infinity Lab Roadmap
+# Infinity Lab - Complete Roadmap
 
-## Features
+| Phase      | Task                                                                         | Priority   | Time Estimate       |
+| ---------- | ---------------------------------------------------------------------------- | ---------- | ------------------ |
+| **Phase 1**| Initial setup of Flutter + Flame project, basic sandbox structure             | High       | 2 weeks            |
+|            | Implementation of basic fusion system with initial elements                  | High       | 3 weeks            |
+|            | Main interface, inventory, and drag & drop                                  | High       | 3 weeks            |
+| **Phase 2**| Discovery log, hint system, and basic tutorials                             | Medium     | 2 weeks            |
+|            | Implementation of basic lab mode (initial real elements catalog)             | High       | 4 weeks            |
+|            | Mixing and real chemical reaction system with simple validation              | High       | 4 weeks            |
+| **Phase 3**| Expansion of chemical catalog and properties (pH, physical states, safety)   | High       | 5 weeks            |
+|            | Advanced interface for workbench, tools, meters                             | High       | 4 weeks            |
+|            | Implementation of educational missions and challenges                       | Medium     | 4 weeks            |
+| **Phase 4**| Enhanced visual and audio feedback for reactions                            | Medium     | 3 weeks            |
+|            | Detailed log and progression system                                         | High       | 3 weeks            |
+|            | Testing, performance optimization, and UX                                   | High       | 4 weeks            |
+| **Phase 5**| Integration between sandbox and lab (export/import elements)                 | Medium     | 3 weeks            |
+|            | Implementation of safety and neutralization system                          | High       | 3 weeks            |
+| **Phase 6**| Localization and multilingual support                                       | Medium     | 2 weeks            |
+|            | Final polish, documentation, and launch preparation                         | High       | 3 weeks            |
 
-- [ ] Drag & drop system for elements
-- [ ] Visual and audio feedback for fusions
-- [ ] Inventory and discovery log
-- [ ] Hint system for new fusions
-- [ ] Save/load system
-- [ ] Responsive sci-fi UI (glassmorphism)
-- [ ] EN/PT-BR localization
-- [ ] Ambient music and sound effects
-- [ ] Search in discovery log
-- [ ] Dark theme
+---
 
-## Next Steps
+## Phase Details
 
-- [ ] Add more element combinations
-- [ ] Improve hint system
-- [ ] Polish UI/UX
-- [ ] Add achievements
-- [ ] Optimize performance
+### Phase 1
+- Project structure with Flutter + Flame
+- Core fusion system implementation
+- Main interface, inventory, and drag & drop
 
-## Ideas for the Future
+### Phase 2
+- Discovery log and hint system
+- Basic tutorials
+- Initial lab mode with real element catalog
+- Simple mixing and chemical reaction system
 
-- [ ] Online leaderboards
-- [ ] User-created elements
-- [ ] Cloud save
-- [ ] More languages
-- [ ] Accessibility improvements
+### Phase 3
+- Chemical catalog expansion
+- Advanced chemical properties (pH, physical states, safety)
+- Advanced workbench and tools interface
+- Educational missions and challenges
+
+### Phase 4
+- Enhanced visual and audio feedback
+- Detailed log and progression system
+- Testing and performance/UX optimization
+
+### Phase 5
+- Integration between sandbox and lab
+- Safety and neutralization system
+
+### Phase 6
+- Localization and multilingual support
+- Final polish, documentation, and launch
+
+---
+
+## Notes
+- The roadmap may be adjusted based on user feedback and project evolution.
+- Time estimates are approximate and may vary depending on team and resources.

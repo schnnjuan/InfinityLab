@@ -1,174 +1,160 @@
 # Infinity Lab
 
-Infinity Lab is a sci-fi sandbox fusion game developed in Flutter + Flame, where you discover new combinations by dragging and dropping elements in a futuristic laboratory area.
+Infinity Lab is a sci-fi sandbox fusion game where players interact in a futuristic laboratory to discover, combine, and create hundreds (or thousands) of new elements, substances, objects, and phenomena. Using an intuitive drag-and-drop mechanic, players experiment with fusions and chemical reactions ranging from basic elements to complex compounds, with an extra layer of realism in the real chemistry lab mode, simulating scientific reactions based on real data.
 
-## 🎮 About the Game
+The game combines exploration, creativity, education, and fun in an accessible experience for all audiences, with modern interfaces, minimalist sci-fi visuals, and immersive soundscapes.
 
-- Combine base elements (💧 Water, 🌬️ Air, 🌍 Earth, 🔥 Fire) to discover hundreds of new creations.
-- Drag and drop elements to attempt fusions.
-- Visual inventory, discovery log, and hint system.
-- Minimalist sci-fi inspired visuals, with glassmorphism and emoji fonts.
-- Ambient audio and sound effects.
-- EN/PT-BR language support.
+---
 
-## 📦 Project Structure
+## 1. Target Audience
 
-```
-lib/
-  main.dart
-  game/infinity_lab_game.dart
-  components/
-    element_component.dart
-    fusion_area.dart
-    inventory_ui.dart
-  data/
-    fusion_data.dart
-    element_model.dart
-    save_manager.dart
-    localization.dart
-  ui/
-    menu_overlay.dart
-    discovery_log.dart
-    theme.dart
-  audio/audio_manager.dart
-  utils/utils.dart
-assets/
-  audio/
-    fusion_success.ogg
-    fusion_denied.ogg
-    click.ogg
-    ambient.mp3
-  fonts/
-    NotoEmoji-Regular.ttf
-  data/
-    fusion_data.json
-    localization_en.json
-    localization_pt.json
-```
+* Casual gamers and fans of creative sandbox games
+* Students and educators interested in chemistry and natural sciences
+* General audience interested in discovery, crafting, and simulation games
+* Mobile, web, and desktop platforms
 
-## 🚀 How to Run
+---
 
-1. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-2. Run on any platform:
-   ```bash
-   flutter run -d chrome      # Web
-   flutter run -d android     # Android
-   flutter run -d ios         # iOS
-   flutter run -d windows     # Desktop
-   ```
+## 2. Development Platforms
 
-## 🛠️ Features
+* Mobile: Android and iOS (Flutter with Flame)
+* Desktop: Windows (Flutter Desktop)
+* Web: Modern browsers (Flutter Web)
 
-- Drag & drop elements with visual/audio feedback
-- Automatic save/load system
-- Discovery log and search
-- Responsive sci-fi dark theme
-- EN/PT-BR localization
+---
+
+## 3. Core Mechanics and Systems
+
+### 3.1 Core Fusion System
+
+* **Initial base elements:** Water, Air, Earth, Fire (emoji symbols for intuitiveness)
+* **Element creation:** Combine two or more elements to generate new ones (e.g., water + fire = steam)
+* **Rules system:** Configurable combination table via JSON/script data, supporting multi-step fusions
+* **Feedback:** Visual (particles, animations), audio, and textual feedback for success or failure
+* **Combination limit:** Flexible to support hundreds to thousands of created items
+
+### 3.2 Inventory and Management
+
+* Visual inventory interface to view available elements
+* Discovery log with filters and search
+* Tag and category system for organization (e.g., organic, minerals, gases)
+* Option for users to rename elements
+
+### 3.3 Real Chemistry Lab Mode (Core Extension)
+
+* Catalog of real chemical elements (H, C, O, N, P, S, Ca, K, Na, Cl, Mg)
+* Real properties: physical states, solubility, pH, energy, chemical bond types
+* Mixing system on a workbench with virtual beakers and test tubes
+* Reaction validation based on chemical rules (acid-base, precipitation, oxidation)
+* Interactive tools: pipettes, stirrers, virtual bunsen, meters (pH, thermometer, scale)
+* Safety system: alerts for dangerous mixtures, simulated explosions, neutralization
+* Detailed experiment log with formulas, visual results, and progressive unlocking
+
+### 3.4 Missions and Challenges System
+
+* Progressive tutorial missions to teach fusion and chemistry basics
+* Free challenges to create specific combinations or solve problems (e.g., neutralize acid)
+* Reward system: unlock new elements, tools, and visuals
+
+### 3.5 Progression and Discovery System
+
+* Automatic log of discovered combinations
+* Achievements/trophies system
+* Progressive unlocking based on scientific advances and achievements
+
+### 3.6 Interface and UX System
+
+* Minimalist main interface with glassmorphism and sci-fi design
+* Intuitive drag & drop, supporting touch and mouse
+* Modular/adaptable panels (inventory, database, workbench, missions)
+* Multilingual system (EN/PT-BR initially)
+* Dark theme support and responsive layout
+
+### 3.7 Audio System
+
+* Ambient sci-fi music
+* Sound effects for interactions, fusion/reaction success/failure
+* Volume and mute controls
+
+---
+
+## 4. Technical Aspects
+
+### 4.1 Framework and Languages
+
+* **Flutter + Flame:** main development for 2D multiplatform, UI, and game logic
+* **Dart:** language for all game logic and interface
+
+### 4.2 Data Structure
+
+* **JSON/Hive/SQLite:** for storing elements, reactions, progress, and settings
+* Data structures for elements with chemical, visual, and sound properties
+* Simple scripting system to add/edit fusion rules without recompiling
+
+### 4.3 Rendering and Animations
+
+* Use of Flame for sprites, animations, and custom particles
+* Visual effects for reactions: color change, smoke, fire, bubbles, precipitates
+
+### 4.4 Saving and Loading
+
+* Automatic and manual save of player progress
+* Cloud backup (optional, future integration)
+* Multiple profile system
+
+### 4.5 Performance and Optimization
+
+* Continuous testing to ensure smoothness on modest mobile devices
+* Efficient memory and processing use for effects and logic
+* UI and response optimization for a responsive UX
+
+---
+
+## 5. User Interface and Experience (UI/UX)
+
+### 5.1 Main Screen
+
+* Central area for experimentation and fusion, with space to drop elements
+* Side/bottom bar with inventory and available elements
+* Buttons to access discovery log, settings, tutorial, and lab mode
+
+### 5.2 Lab Workbench
+
+* Virtual table with space for multiple beakers and test tubes
+* Lab tools available via menu (pipettes, bunsen, stirrers)
+* Digital meters for pH, temperature, weight, and volume
+* Visual safety indicators (e.g., dangerous reagent levels)
+
+### 5.3 Discovery Log
+
+* Chronological list of all fusions and reactions performed
+* Option to view details and chemical formulas
+* Search and filter by category
+
+### 5.4 Hints and Help System
+
+* Contextual hints during experimentation
+* Step-by-step tutorial with "learn by playing" mode
+* FAQ and educational section about chemistry in the lab
+
+---
+
+## 6. Audio and Music
+
+* Soft sci-fi ambient soundtrack, adaptive to different situations
+* Manipulation sounds (clicks, drag, drop)
+* Chemical reaction sounds (bubbling, sparks, light explosions)
+* Audio customization options in the menu
+
+---
 
 ## 📄 Roadmap
 
-See progress and tasks in [ROADMAP.md](./ROADMAP.md).
-
-## 📢 Contribution
-
-Pull requests are welcome! Please follow the project standards and describe your changes clearly.
-
-## 📜
+See progress and tasks in [ROADMAP_en.md](./ROADMAP_en.md).
 
 ---
 
-## Real Chemistry Lab Mode Proposal for InfinityLab
 
-### 1. **General Objective**
+## Final Summary
 
-Create a game mode where the player can perform real and simulated chemical experiments, combining reagents and observing real reactions based on true chemical properties, focusing on education and discovery.
-
----
-
-### 2. **Key Elements of Lab Mode**
-
-a) Real Substance Catalog
-* Chemical elements (H, O, Na, Cl, Fe, etc.)
-* Common compounds (H2O, NaCl, CO2, Sulfuric acid, etc.)
-* Reagents, acids, bases, salts, solvents
-
-b) Physical and Chemical Properties
-* Physical states (solid, liquid, gas)
-* Solubility
-* pH
-* Chemical reactivity (acid-base, redox, precipitation)
-* Reaction temperature and energy (exothermic/endothermic)
-
-c) Mixing and Reaction System
-* Allow the player to combine substances in a virtual beaker or test tube
-* Evaluate chemical reactions based on real tables and rules (e.g., acid + base → salt + water)
-* Show visual results (color change, gas release, precipitate, temperature, controlled explosion, etc.)
-
-d) Lab Interface
-* Workbench with space to manipulate bottles and test tubes
-* Tools like pipettes, stirrers, bunsen burner (virtual flame)
-* Visual meters: pH meter, thermometer, scale
-
-e) Safety System
-* Warnings about dangerous substances
-* Consequences for incorrect mixtures (explosions, failures)
-* Items to "neutralize" accidents (extinguisher, eyewash)
-
----
-
-### 3. **Additional Features and Mechanics**
-
-a) Educational Missions and Challenges
-* Guided experiments with step-by-step instructions to teach concepts (e.g., titration, neutralization reaction)
-* Free challenges for the player to create their own combinations and discover reactions
-
-b) Experiment Log and Database
-* History of experiments performed, with reaction descriptions, chemical formulas, visual results, and effects
-* "Discovery" system to unlock new reagents or equipment as you progress
-
-c) Integration with Current Sandbox Mode
-* Allow exporting lab creations to the sandbox mode, to use real chemical elements in more fantastical combinations
-* Or vice versa, use sandbox discoveries to create new reagents for the realistic lab
-
----
-
-### 4. **Technical Challenges and Considerations**
-
-a) Chemical Simulation
-* Create a database with basic chemical reactions to check combinations (rules based on real chemistry)
-* Visually model reactions (particles, color change, bubbles, smoke, etc.)
-
-b) Interface and Usability
-* Build an accessible and clear UI, especially for users who are not chemistry experts
-* Balance between scientific accuracy and fun, to keep the game light and intuitive
-
-c) Performance
-* Reactions and simulations should run smoothly, without lag
-* Consider using simplified physics and efficient visual effects
-
----
-
-### 5. **Recommended Technologies and Tools**
-* **Flame (Flutter)**: already used in the project, great for 2D and interactive UI
-* **Local database** to store compounds and results (SQLite, Hive)
-* **Script system** to define reactions and chemical rules, making it easy to add new compounds in the future
-* **Custom animations** to represent visual changes in reactions
-* **Open chemistry API or database** to obtain real properties and formulas
-
----
-
-### 6. **Summary of Main Implementation Steps**
-
-a) Set up the new game mode interface and navigation
-b) Develop the substance catalog and reaction database
-c) Implement the mixing and reaction system
-d) Create the lab interface with workbench, tools, and visual meters
-e) Develop the safety system and consequences for reactions
-f) Implement educational missions and experiment log features
-g) Optimize performance and ensure smooth simulations
-h) Test with real chemistry data and adjust balance/accuracy
-i) Polish visuals, animations, and audio feedback
-j) Prepare documentation and tutorials for players
+**Infinity Lab** is an ambitious project that unites creativity, science, and technology to offer an innovative and educational sandbox. With modular systems, an intuitive interface, and a focus on fun and learning, the game has the potential to captivate a wide audience, from casual gamers to students and educators. The presented roadmap and structure ensure clarity for efficient and scalable development.

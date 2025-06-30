@@ -1,171 +1,160 @@
 # Infinity Lab
 
-Infinity Lab é um jogo sandbox sci-fi de fusão de elementos, desenvolvido em Flutter + Flame, onde você descobre novas combinações arrastando e soltando elementos em uma área de laboratório futurista.
+Infinity Lab é um jogo sandbox sci-fi de fusão de elementos, onde o jogador interage em um laboratório futurista para descobrir, combinar e criar centenas (ou milhares) de novos elementos, substâncias, objetos e fenômenos. Utilizando uma mecânica intuitiva de arrastar e soltar, o jogador experimenta fusões e reações químicas que vão desde simples elementos básicos até compostos complexos, com uma camada extra de realismo no modo laboratório de química real, que simula reações científicas com base em dados reais.
 
-## 🎮 Sobre o Jogo
+O jogo combina exploração, criatividade, educação e diversão em uma experiência acessível para todos os públicos, com interfaces modernas, visuais minimalistas sci-fi e ambientação sonora imersiva.
 
-- Combine elementos base (🔥 Água, 🌬️ Ar, 🌍 Terra, 🔥 Fogo) para descobrir centenas de novas criações.
-- Arraste e solte elementos para tentar fusões.
-- Inventário visual, log de descobertas e sistema de dicas.
-- Visual minimalista inspirado em sci-fi, com glassmorphism e fontes emoji.
-- Áudio ambiente e efeitos sonoros.
-- Suporte a EN/PT-BR.
+---
 
-## 📦 Estrutura do Projeto
+## 1. Público-Alvo
 
-```
-lib/
-  main.dart
-  game/infinity_lab_game.dart
-  components/
-    element_component.dart
-    fusion_area.dart
-    inventory_ui.dart
-  data/
-    fusion_data.dart
-    element_model.dart
-    save_manager.dart
-    localization.dart
-  ui/
-    menu_overlay.dart
-    discovery_log.dart
-    theme.dart
-  audio/audio_manager.dart
-  utils/utils.dart
-assets/
-  audio/
-    fusion_success.ogg
-    fusion_denied.ogg
-    click.ogg
-    ambient.mp3
-  fonts/
-    NotoEmoji-Regular.ttf
-  data/
-    fusion_data.json
-    localization_en.json
-    localization_pt.json
-```
+* Jogadores casuais e fãs de jogos sandbox criativos.
+* Estudantes e educadores interessados em química e ciências naturais.
+* Público geral interessado em jogos de descoberta, crafting e simulação.
+* Plataformas mobile, web e desktop.
 
-## 🚀 Como Rodar
+---
 
-1. Instale as dependências:
-   ```bash
-   flutter pub get
-   ```
-2. Rode em qualquer plataforma:
-   ```bash
-   flutter run -d chrome      # Web
-   flutter run -d android     # Android
-   flutter run -d ios         # iOS
-   flutter run -d windows     # Desktop
-   ```
+## 2. Plataformas de Desenvolvimento
 
-## 🛠️ Funcionalidades
+* Mobile: Android e iOS (Flutter com Flame)
+* Desktop: Windows (Flutter Desktop)
+* Web: navegadores modernos (Flutter Web)
 
-- Drag & drop de elementos com feedback visual/sonoro
-- Sistema de save/load automático
-- Log de descobertas e busca
-- Tema escuro sci-fi responsivo
-- Localização EN/PT-BR
+---
+
+## 3. Mecânicas e Sistemas Principais
+
+### 3.1 Sistema de Combinação (Core Fusion)
+
+* **Elementos base iniciais:** Água, Ar, Terra, Fogo (símbolos emoji para intuitividade)
+* **Criação de elementos:** Combinação de dois ou mais elementos para gerar novos (ex: água + fogo = vapor)
+* **Sistema de regras:** Tabela de combinações configurável via dados JSON/script, com suporte a múltiplas etapas de fusão
+* **Feedback:** Feedback visual (partículas, animações), sonoro e textual para sucesso ou falha
+* **Limite de combinações:** Flexível para suportar centenas a milhares de itens criados
+
+### 3.2 Inventário e Gerenciamento
+
+* Interface visual de inventário para visualizar elementos disponíveis
+* Histórico de descobertas, com filtros e buscas
+* Sistema de tags e categorias para organização (ex: orgânicos, minerais, gases)
+* Possibilidade de renomear elementos pelo usuário
+
+### 3.3 Modo Laboratório de Química Real (Extensão do Core)
+
+* Catálogo de elementos químicos reais (H, C, O, N, P, S, Ca, K, Na, Cl, Mg)
+* Propriedades reais: estados físicos, solubilidade, pH, energia, tipos de ligação química
+* Sistema de mistura em bancada com béqueres e tubos de ensaio virtuais
+* Validação de reações com base em regras químicas (ácido-base, precipitação, oxidação)
+* Ferramentas interativas: pipetas, agitadores, bunsen virtual, medidores (pHmetro, termômetro, balança)
+* Sistema de segurança: alertas para misturas perigosas, explosões simuladas, neutralização
+* Registro detalhado de experimentos com fórmulas, resultados visuais e desbloqueio progressivo
+
+### 3.4 Sistema de Missões e Desafios
+
+* Missões tutoriais progressivas para ensinar o funcionamento e conceitos básicos de fusão e química
+* Desafios livres para criar combinações específicas ou solucionar problemas (ex: neutralizar ácido)
+* Sistema de recompensas: desbloqueio de novos elementos, ferramentas e visuais
+
+### 3.5 Sistema de Progresso e Descoberta
+
+* Registro automático das combinações descobertas
+* Sistema de achievements/troféus
+* Sistema de desbloqueio progressivo baseado em avanços científicos e conquistas
+
+### 3.6 Sistema de Interface e UX
+
+* Interface principal minimalista com glassmorphism e design sci-fi
+* Drag & drop intuitivo, com suporte a toque e mouse
+* Painéis modulares e adaptáveis (inventário, banco de dados, bancada, missões)
+* Sistema multilíngue (EN/PT-BR inicial)
+* Suporte a tema escuro e responsividade para diferentes resoluções
+
+### 3.7 Sistema de Áudio
+
+* Música ambiente ambiental sci-fi
+* Efeitos sonoros para interações, sucesso/falha em fusões e reações químicas
+* Configurações para controle de volume e mute
+
+---
+
+## 4. Aspectos Técnicos
+
+### 4.1 Framework e Linguagens
+
+* **Flutter + Flame:** desenvolvimento principal para multi-plataforma 2D, UI e lógica do jogo
+* **Dart:** linguagem para toda a lógica do jogo e interface
+
+### 4.2 Estrutura de Dados
+
+* **JSON/Hive/SQLite:** para armazenamento de elementos, reações, progresso e configurações
+* Estruturas de dados para elementos com propriedades químicas, visuais e sons associados
+* Sistema de scripts simples para adicionar ou editar regras de fusão sem recompilar o jogo
+
+### 4.3 Renderização e Animações
+
+* Uso do Flame para sprites, animações e partículas customizadas
+* Efeitos visuais para reações: mudança de cor, fumaça, fogo, bolhas, precipitados
+
+### 4.4 Salvamento e Carregamento
+
+* Save automático e manual do progresso do jogador
+* Backup em nuvem (opcional, via integração futura)
+* Sistema de múltiplos perfis
+
+### 4.5 Performance e Otimização
+
+* Testes contínuos para garantir fluidez em dispositivos móveis mais modestos
+* Uso eficiente de memória e processamento para efeitos e lógica
+* Otimização da interface e respostas para UX responsiva
+
+---
+
+## 5. Interface e Experiência do Usuário (UI/UX)
+
+### 5.1 Tela Principal
+
+* Área central para experimentação e fusão, com espaço para soltar elementos
+* Barra lateral/inferior com inventário e elementos disponíveis
+* Botões para acessar log de descobertas, configurações, tutorial e modo laboratório
+
+### 5.2 Bancada do Laboratório
+
+* Mesa virtual com espaço para múltiplos béqueres e tubos de ensaio
+* Ferramentas de laboratório disponíveis via menu (pipetas, bunsen, agitadores)
+* Medidores digitais para pH, temperatura, peso e volume
+* Indicadores visuais de segurança (ex: níveis perigosos de reagentes)
+
+### 5.3 Log de Descobertas
+
+* Listagem cronológica de todas as fusões e reações feitas
+* Opção para visualizar detalhes e fórmulas químicas
+* Função de busca e filtro por categoria
+
+### 5.4 Sistema de Dicas e Ajuda
+
+* Dicas contextuais automáticas durante experimentação
+* Tutorial passo a passo com modo “aprenda jogando”
+* FAQ e seção educativa sobre química no laboratório
+
+---
+
+## 6. Áudio e Música
+
+* Trilha sonora ambiente sci-fi suave, adaptativa para diferentes situações
+* Sons de manipulação (cliques, arrastar, soltar)
+* Sons de reações químicas (borbulhar, faíscas, explosões leves)
+* Opções de personalização de áudio no menu
+
+---
 
 ## 📄 Roadmap
 
 Veja o progresso e tarefas em [ROADMAP.md](./ROADMAP.md).
 
-## 📢 Contribuição
-
-Pull requests são bem-vindos! Siga o padrão do projeto e descreva bem suas alterações.
-
-## 📜
-
 ---
 
-## Proposta detalhada para o Modo Laboratório de Química Real no InfinityLab
 
-### 1. **Objetivo Geral**
+## Resumo Final
 
-Criar um modo de jogo onde o jogador pode realizar experimentos químicos reais e simulados, combinando reagentes, observando reações reais baseadas em propriedades químicas verdadeiras, com foco em educação e descoberta.
-
----
-
-### 2. **Elementos-Chave do Modo Laboratório**
-
-a) Catálogo de Substâncias Reais
-* Elementos químicos (H, O, Na, Cl, Fe, etc.)
-* Compostos comuns (H2O, NaCl, CO2, Ácido sulfúrico, etc.)
-* Reagentes, ácidos, bases, sais, solventes
-
-b) Propriedades Físicas e Químicas
-* Estados físicos (sólido, líquido, gasoso)
-* Solubilidade
-* pH
-* Reatividade química (ácido-base, oxidação-redução, precipitação)
-* Temperatura de reação e energia envolvida (exotérmica/endotérmica)
-
-c) Sistema de Mistura e Reação
-* Permitir o jogador combinar substâncias em um “béquer” ou tubo de ensaio virtual
-* Avaliar as reações químicas com base em tabelas e regras reais (exemplo: ácido + base → sal + água)
-* Mostrar resultados visuais (mudança de cor, liberação de gás, precipitado, temperatura, explosão controlada etc.)
-
-d) Interface de Laboratório
-* Bancada com espaço para manipular frascos e tubos de ensaio
-* Ferramentas como pipetas, agitadores, bunsen (fogo virtual)
-* Medidores visuais: pHmetro, termômetro, balança
-
-e) Sistema de Segurança
-* Avisos sobre substâncias perigosas
-* Consequências para misturas incorretas (explosões, falhas)
-* Itens para “neutralizar” acidentes (extintor, lava-olhos)
-
----
-
-### 3. **Funcionalidades e Mecânicas Adicionais**
-
-a) Missões Educativas e Desafios
-* Experimentos guiados com passo a passo para ensinar conceitos (ex: titulação, reação de neutralização)
-* Desafios livres para o jogador criar suas próprias combinações e descobrir reações
-
-b) Registro e Banco de Dados de Experimentos
-* Histórico dos experimentos realizados, com descrição das reações, fórmulas químicas, resultados visuais e efeitos
-* Sistema de “descoberta” para desbloquear novos reagentes ou equipamentos ao progredir
-
-c) Integração com Modo Sandbox Atual
-* Permitir exportar criações do laboratório para o modo sandbox, para usar elementos químicos reais em combinações mais fantasiosas
-* Ou vice-versa, usar descobertas do modo sandbox para criar reagentes novos para o laboratório realista
-
----
-
-### 4. **Desafios Técnicos e Considerações**
-
-a) Simulação Química
-* Criar uma base de dados com as reações químicas básicas para verificar combinações (regras baseadas em química real)
-* Modelar visualmente reações (partículas, mudança de cor, liberação de bolhas, fumaça etc.)
-
-b) Interface e Usabilidade
-* Construir uma UI acessível e clara, especialmente para usuários que não são especialistas em química
-* Balancear entre precisão científica e diversão, para manter o jogo leve e intuitivo
-
-c) Performance
-* Reações e simulações devem rodar fluidamente, sem atrasos
-* Considerar uso de física simplificada e efeitos visuais eficientes
-
----
-
-### 5. **Tecnologias e Ferramentas Recomendadas**
-* **Flame (Flutter)**: já usado no projeto, ótimo para 2D e interface interativa
-* **Banco de dados local** para armazenar compostos e resultados (SQLite, Hive)
-* **Sistema de scripts** para definir reações e regras químicas, facilitando adição futura de novos compostos
-* **Animações customizadas** para representar mudanças visuais das reações
-* **API ou base de dados química** (aberta) para obter propriedades reais e fórmulas
-
----
-
-### 6. **Resumo das Principais Etapas para Implementação**
-
-1. Pesquisa e definição do escopo das reações químicas e substâncias a serem incluídas
-2. Criação da estrutura de dados para armazenar informações de elementos, compostos e reações
-3. Desenvolvimento do sistema de mistura e reação, com validação das regras químicas
-4. Implementação da interface do usuário para o modo laboratório, incluindo bancada, ferramentas e medidores
-5. Criação do sistema de missões e desafios educativos
-6. Testes de usabilidade e ajuste de performance
-7. Documentação e preparação para lançamento da nova funcionalidade
+**Infinity Lab** é um projeto ambicioso que une criatividade, ciência e tecnologia para oferecer um sandbox inovador e educativo. Com sistemas modulares, interface intuitiva e foco na diversão e aprendizado, o jogo tem potencial para cativar um público amplo, desde jogadores casuais até estudantes e educadores. O roadmap e estrutura apresentados garantem clareza para desenvolvimento eficiente e escalável.
