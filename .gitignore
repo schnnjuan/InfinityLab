@@ -43,3 +43,40 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Additions for Flutter cross-platform
+# Android
+*.apk
+*.ap_*
+*.aab
+
+# iOS
+ios/Pods/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/ephemeral/
+
+# Web
+web/.dart_tool/
+web/build/
+
+# Linux
+linux/flutter/ephemeral/
+
+# Windows
+windows/flutter/ephemeral/
+
+# macOS
+macos/Flutter/ephemeral/
+
+# Others
+*.tmp
+
+# Uncomment below if you want to ignore generated plugin registrant files (optional)
+# linux/flutter/generated_plugin_registrant.cc
+# linux/flutter/generated_plugins.cmake
+# macos/Flutter/GeneratedPluginRegistrant.swift
+# windows/flutter/generated_plugin_registrant.cc
+# windows/flutter/generated_plugins.cmake
