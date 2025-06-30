@@ -58,3 +58,35 @@
 ## Observações
 - O roadmap pode ser ajustado conforme feedback dos usuários e evolução do projeto.
 - Estimativas de tempo são aproximadas e podem variar conforme a equipe e recursos disponíveis.
+
+---
+
+## Sugestões Futuras e Expansões
+
+### Modo Sandbox — IA e Expansibilidade
+- Implementar IA para sugerir fusões com base em histórico do jogador
+- Sistema de geração procedural de fusões usando embeddings vetoriais
+- Plugin de modding (JSON/YAML) para criação de novas receitas por usuários
+
+### Modo Laboratório — Realismo Químico Avançado
+- Importar dados de APIs químicas abertas (como PubChem ou ChemSpider)
+- Modelar efeitos visuais com base em energia da reação (exotérmica vs endotérmica)
+- Adicionar painel de estrutura molecular (representação com bastões e esferas)
+
+### Analytics e Balanceamento
+- Sistema interno de telemetria (ex: quais fusões são mais tentadas)
+- Painel administrativo para ajustes de taxa de fusão, dificuldade, limites
+
+### Online / Multiplayer
+- Versão colaborativa do laboratório em tempo real
+- Compartilhamento de fusões no modo sandbox entre usuários
+- Leaderboards por criatividade, fusões raras, química mais complexa
+
+### Educação + Certificação
+- Criação de trilhas temáticas com certificados (química orgânica, inorgânica, bioquímica)
+- Sistema de quizzes e provas sobre reações simuladas
+- API para escolas e integração com LMS
+
+### Editor Interno
+- Criar um editor visual no app para modificar elementos, fusões e reações químicas
+- Salvar/exportar/importar configurações personalizadas

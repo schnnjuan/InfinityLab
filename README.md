@@ -158,3 +158,17 @@ Veja o progresso e tarefas em [ROADMAP.md](./ROADMAP.md).
 ## Resumo Final
 
 **Infinity Lab** é um projeto ambicioso que une criatividade, ciência e tecnologia para oferecer um sandbox inovador e educativo. Com sistemas modulares, interface intuitiva e foco na diversão e aprendizado, o jogo tem potencial para cativar um público amplo, desde jogadores casuais até estudantes e educadores. O roadmap e estrutura apresentados garantem clareza para desenvolvimento eficiente e escalável.
+
+---
+
+## 🌟 Visão Futura e Possibilidades de Expansão
+
+- **IA no Sandbox:** Sugerir fusões com base no histórico do jogador e permitir geração procedural de receitas.
+- **Modding:** Plugins e arquivos JSON/YAML para criação de novas fusões por usuários.
+- **Laboratório Avançado:** Integração com APIs químicas abertas, efeitos visuais realistas e painel de estrutura molecular.
+- **Analytics:** Telemetria interna e painel administrativo para balanceamento dinâmico.
+- **Online/Multiplayer:** Laboratório colaborativo em tempo real, compartilhamento de fusões e leaderboards.
+- **Educação:** Trilhas temáticas, quizzes, certificação e integração com plataformas educacionais.
+- **Editor Interno:** Ferramenta visual para modificar e exportar elementos, fusões e reações.
+
+Para detalhes completos e sugestões, veja também o [ROADMAP.md](./ROADMAP.md).

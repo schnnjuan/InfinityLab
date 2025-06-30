@@ -58,3 +58,35 @@
 ## Notes
 - The roadmap may be adjusted based on user feedback and project evolution.
 - Time estimates are approximate and may vary depending on team and resources.
+
+---
+
+## Future Suggestions and Expansions
+
+### Sandbox Mode — AI and Expandability
+- Implement AI to suggest fusions based on player history
+- Procedural fusion generation system using vector embeddings
+- Modding plugin (JSON/YAML) for users to create new recipes
+
+### Lab Mode — Advanced Chemical Realism
+- Import data from open chemical APIs (such as PubChem or ChemSpider)
+- Visual effects modeling based on reaction energy (exothermic vs endothermic)
+- Add molecular structure panel (ball-and-stick representation)
+
+### Analytics and Balancing
+- Internal telemetry system (e.g., most attempted fusions)
+- Admin panel for adjusting fusion rates, difficulty, limits
+
+### Online / Multiplayer
+- Real-time collaborative lab mode
+- Fusion sharing in sandbox mode between users
+- Leaderboards for creativity, rare fusions, most complex chemistry
+
+### Education + Certification
+- Thematic learning tracks with certificates (organic, inorganic, biochemistry)
+- Quiz and test system for simulated reactions
+- API for schools and LMS integration
+
+### Internal Editor
+- Create a visual editor in-app to modify elements, fusions, and chemical reactions
+- Save/export/import custom configurations

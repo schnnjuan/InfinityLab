@@ -158,3 +158,17 @@ See progress and tasks in [ROADMAP_en.md](./ROADMAP_en.md).
 ## Final Summary
 
 **Infinity Lab** is an ambitious project that unites creativity, science, and technology to offer an innovative and educational sandbox. With modular systems, an intuitive interface, and a focus on fun and learning, the game has the potential to captivate a wide audience, from casual gamers to students and educators. The presented roadmap and structure ensure clarity for efficient and scalable development.
+
+---
+
+## 🌟 Future Vision and Expansion Possibilities
+
+- **AI in Sandbox:** Suggest fusions based on player history and allow procedural recipe generation.
+- **Modding:** Plugins and JSON/YAML files for users to create new fusions.
+- **Advanced Lab:** Integration with open chemical APIs, realistic visual effects, and molecular structure panel.
+- **Analytics:** Internal telemetry and admin panel for dynamic balancing.
+- **Online/Multiplayer:** Real-time collaborative lab, fusion sharing, and leaderboards.
+- **Education:** Thematic learning tracks, quizzes, certification, and integration with educational platforms.
+- **Internal Editor:** Visual tool to modify and export elements, fusions, and reactions.
+
+For full details and suggestions, see also [ROADMAP_en.md](./ROADMAP_en.md).
