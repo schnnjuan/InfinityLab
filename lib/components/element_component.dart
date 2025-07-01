@@ -3,7 +3,7 @@ import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/data/element_model.dart';
 
-class ElementComponent extends PositionComponent with DragCallbacks {
+class ElementComponent extends PositionComponent {
   final ElementModel element;
   final TextComponent _emojiText;
 
@@ -28,16 +28,5 @@ class ElementComponent extends PositionComponent with DragCallbacks {
           anchor: anchor ?? Anchor.center,
         ) {
     add(_emojiText);
-  }
-
-  @override
-  void onDragUpdate(DragUpdateEvent event) {
-    position.add(event.localDelta);
-  }
-
-  @override
-  void onDragEnd(DragEndEvent event) {
-    // TODO: Handle what happens when drag ends (e.g., snap to grid, drop in fusion area)
-    super.onDragEnd(event);
   }
 }

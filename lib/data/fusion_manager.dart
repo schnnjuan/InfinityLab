@@ -13,7 +13,7 @@ class FusionManager extends ChangeNotifier {
   static Map<String, ElementModel> _allElements = {};
   static final Set<String> _discoveredElementIds = {'fire', 'water', 'earth', 'air'}; // Start with basic elements discovered
 
-  static Future<void> loadFusions() async {
+  Future<void> loadFusions() async {
     final String response = await rootBundle.loadString('assets/fusion_table.json');
     final data = json.decode(response);
     _fusionRules = (data['fusions'] as List)

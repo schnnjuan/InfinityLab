@@ -7,7 +7,9 @@ import 'package:infinitylab/components/inventory_ui.dart';
 import 'package:infinitylab/ui/discovery_log.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FusionManager().loadFusions();
   runApp(
     ChangeNotifierProvider(
       create: (context) => FusionManager(),
@@ -30,7 +32,6 @@ class _MainAppState extends State<MainApp> {
   void initState() {
     super.initState();
     game = InfinityLabGame();
-    FusionManager().loadFusions(); // Load fusions when the app starts
   }
 
   @override

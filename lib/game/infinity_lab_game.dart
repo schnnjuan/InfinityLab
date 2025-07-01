@@ -7,15 +7,61 @@ import 'package:flame/particles.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/audio/audio_manager.dart';
 import 'package:infinitylab/components/element_component.dart';
+import 'package:infinitylab/components/fusion_area.dart';
 
-class InfinityLabGame extends FlameGame with TapCallbacks, HasCollisionDetection, Draggable {
+class InfinityLabGame extends FlameGame with TapCallbacks, HasCollisionDetection {
   final AudioManager audioManager = AudioManager();
   bool isFusing = false;
   final Random _random = Random();
+  ElementComponent? _currentDraggedElement;
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
+    add(FusionArea(position: Vector2(size.x / 2 - 100, size.y / 2 - 100), size: Vector2(200, 200)));
+  }
+
+  @override
+  void onTapDown(TapDownEvent event) {
+    final clickedComponents = children.whereType<ElementComponent>().where((c) => c.containsLocalPoint(event.localPosition));
+    if (clickedComponents.isNotEmpty) {
+      _currentDraggedElement = clickedComponents.first;
+    }
+  }
+
+  @override
+  void onDragUpdate(DragUpdateEvent event) {
+    if (_currentDraggedElement != null) {
+      _currentDraggedElement!.position.add(event.localDelta);
+    }
+  }
+
+  @override
+  void onDragEnd(DragEndEvent event) {
+    if (_currentDraggedElement != null) {
+      final fusionArea = children.whereType<FusionArea>().firstOrNull;
+      if (fusionArea != null && fusionArea.toRect().contains(_currentDraggedElement!.toRect().center)) {
+        fusionArea.handleDroppedElement(_currentDraggedElement!); // Call handleDroppedElement on FusionArea
+      } else {
+        // If not dropped on fusion area, return to original position or remove
+        _currentDraggedElement!.removeFromParent(); // For now, just remove it
+      }
+      _currentDraggedElement = null;
+    }
+  }
+
+  @override
+  void onTapUp(TapUpEvent event) {
+    if (_currentDraggedElement != null) {
+      _currentDraggedElement = null;
+    }
+  }
+
+  @override
+  void onTapCancel(TapCancelEvent event) {
+    if (_currentDraggedElement != null) {
+      _currentDraggedElement = null;
+    }
   }
 
   void addElementAtPosition(ElementComponent element, Vector2 position) {
@@ -123,11 +169,4 @@ class InfinityLabGame extends FlameGame with TapCallbacks, HasCollisionDetection
       removeOnFinish: true,
     ));
   }
-
-  @override
-  void onTapDown(TapDownEvent event) {
-    super.onTapDown(event);
-    // Removed test fusion calls
-  }
 }
-
