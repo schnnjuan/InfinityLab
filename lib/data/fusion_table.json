@@ -1,0 +1,84 @@
+{
+  "fusions": [
+    {
+      "inputs": ["fire", "water"],
+      "output": "steam"
+    },
+    {
+      "inputs": ["earth", "fire"],
+      "output": "lava"
+    },
+    {
+      "inputs": ["earth", "water"],
+      "output": "mud"
+    },
+    {
+      "inputs": ["air", "water"],
+      "output": "rain"
+    },
+    {
+      "inputs": ["air", "fire"],
+      "output": "energy"
+    },
+    {
+      "inputs": ["air", "earth"],
+      "output": "dust"
+    },
+    {
+      "inputs": ["lava", "water"],
+      "output": "obsidian"
+    },
+    {
+      "inputs": ["air", "lava"],
+      "output": "stone"
+    },
+    {
+      "inputs": ["earth", "rain"],
+      "output": "plant"
+    },
+    {
+      "inputs": ["fire", "mud"],
+      "output": "brick"
+    },
+    {
+      "inputs": ["dust", "water"],
+      "output": "clay"
+    },
+    {
+      "inputs": ["air", "steam"],
+      "output": "cloud"
+    },
+    {
+      "inputs": ["fire", "stone"],
+      "output": "metal"
+    },
+    {
+      "inputs": ["fire", "plant"],
+      "output": "ash"
+    },
+    {
+      "inputs": ["plant", "water"],
+      "output": "swamp"
+    },
+    {
+      "inputs": ["energy", "swamp"],
+      "output": "life"
+    },
+    {
+      "inputs": ["clay", "fire"],
+      "output": "pottery"
+    },
+    {
+      "inputs": ["earth", "life"],
+      "output": "golem"
+    },
+    {
+      "inputs": ["air", "life"],
+      "output": "bird"
+    },
+    {
+      "inputs": ["metal", "stone"],
+      "output": "blade"
+    }
+  ]
+}
