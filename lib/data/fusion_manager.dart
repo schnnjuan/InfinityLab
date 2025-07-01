@@ -1,11 +1,17 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/foundation.dart'; // Import ChangeNotifier
 import 'package:infinitylab/data/element_model.dart';
 import 'package:infinitylab/data/fusion_data.dart';
 
-class FusionManager {
+class FusionManager extends ChangeNotifier {
+  static final FusionManager _instance = FusionManager._internal();
+  factory FusionManager() => _instance;
+  FusionManager._internal();
+
   static List<FusionRule> _fusionRules = [];
   static Map<String, ElementModel> _allElements = {};
+  static final Set<String> _discoveredElementIds = {'fire', 'water', 'earth', 'air'}; // Start with basic elements discovered
 
   static Future<void> loadFusions() async {
     final String response = await rootBundle.loadString('assets/fusion_table.json');
@@ -45,7 +51,16 @@ class FusionManager {
     return true;
   }
 
-  static void addDiscoveredElement(ElementModel element) {
-    _allElements[element.id] = element;
+  void addDiscoveredElement(ElementModel element) {
+    if (!_discoveredElementIds.contains(element.id)) {
+      _allElements[element.id] = element;
+      _discoveredElementIds.add(element.id);
+      notifyListeners();
+    }
   }
+
+  List<ElementModel> get discoveredElements =>
+      _discoveredElementIds.map((id) => _allElements[id]!).toList();
+
+  List<ElementModel> get availableElements => _allElements.values.toList();
 }

@@ -6,8 +6,9 @@ import 'package:flame/game.dart';
 import 'package:flame/particles.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/audio/audio_manager.dart';
+import 'package:infinitylab/components/element_component.dart';
 
-class InfinityLabGame extends FlameGame with TapCallbacks {
+class InfinityLabGame extends FlameGame with TapCallbacks, HasCollisionDetection, Draggable {
   final AudioManager audioManager = AudioManager();
   bool isFusing = false;
   final Random _random = Random();
@@ -17,7 +18,10 @@ class InfinityLabGame extends FlameGame with TapCallbacks {
     await super.onLoad();
   }
 
-  // Removed attemptFusion method as fusion logic is handled in MainApp
+  void addElementAtPosition(ElementComponent element, Vector2 position) {
+    element.position = position;
+    add(element);
+  }
 
   void _runSuccessAnimation(Vector2 position) {
     const glitchCharacters = ['ƛ', 'Ʃ', 'ʭ', 'ʬ', 'ʮ', 'ʯ', 'ʁ', 'ʃ', 'ʤ', 'ʦ', 'ʧ', 'ʨ', 'ʰ', 'ʱ', 'ʲ', 'ʳ', 'ʴ', 'ʵ', 'ʶ'];
