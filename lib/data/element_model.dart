@@ -5,7 +5,7 @@ class ElementModel {
   final String description;
   final String category;
 
-  ElementModel({
+  const ElementModel({
     required this.id,
     required this.name,
     required this.emoji,

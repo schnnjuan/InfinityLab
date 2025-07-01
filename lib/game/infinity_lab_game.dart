@@ -6,10 +6,8 @@ import 'package:flame/game.dart';
 import 'package:flame/particles.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/audio/audio_manager.dart';
-import 'package:infinitylab/data/fusion_data.dart';
 
 class InfinityLabGame extends FlameGame with TapCallbacks {
-  final FusionManager fusionManager = FusionManager();
   final AudioManager audioManager = AudioManager();
   bool isFusing = false;
   final Random _random = Random();
@@ -17,34 +15,9 @@ class InfinityLabGame extends FlameGame with TapCallbacks {
   @override
   Future<void> onLoad() async {
     await super.onLoad();
-    await fusionManager.loadFusions();
   }
 
-  void attemptFusion(String element1, String element2, Vector2 position) {
-    if (isFusing) {
-      return;
-    }
-
-    isFusing = true;
-
-    final result = fusionManager.getFusionResult(element1, element2);
-
-    if (result != null) {
-      print('Fusão bem-sucedida! Novo elemento: $result');
-      audioManager.playSuccessSound();
-      _runSuccessAnimation(position);
-    } else {
-      print('Falha na fusão.');
-      audioManager.playFailureSound();
-      _runFailureAnimation(position);
-    }
-
-    add(TimerComponent(
-      period: 1.5,
-      onTick: () => isFusing = false,
-      removeOnFinish: true,
-    ));
-  }
+  // Removed attemptFusion method as fusion logic is handled in MainApp
 
   void _runSuccessAnimation(Vector2 position) {
     const glitchCharacters = ['ƛ', 'Ʃ', 'ʭ', 'ʬ', 'ʮ', 'ʯ', 'ʁ', 'ʃ', 'ʤ', 'ʦ', 'ʧ', 'ʨ', 'ʰ', 'ʱ', 'ʲ', 'ʳ', 'ʴ', 'ʵ', 'ʶ'];
@@ -150,11 +123,7 @@ class InfinityLabGame extends FlameGame with TapCallbacks {
   @override
   void onTapDown(TapDownEvent event) {
     super.onTapDown(event);
-    // Teste: alterna entre sucesso e falha
-    if (_random.nextBool()) {
-      attemptFusion('fire', 'water', event.localPosition); // Sucesso
-    } else {
-      attemptFusion('invalid', 'element', event.localPosition); // Falha
-    }
+    // Removed test fusion calls
   }
 }
+
