@@ -112,8 +112,8 @@ InfinityLab/
     ```
 4.  **Abra um Pull Request!**
 
-> Dúvidas? Veja [CONTRIBUTING.md](./CONTRIBUTING.md)
-
+> Dúvidas? Veja o [CONTRIBUTING.md](./CONTRIBUTING.md)
+> Veja também o [|ROADMAP.md](./ROADMAP.md)
 ---
 
 
