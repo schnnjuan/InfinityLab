@@ -1,5 +1,4 @@
 import 'package:flame/components.dart';
-import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/data/element_model.dart';
 
@@ -9,7 +8,7 @@ class ElementComponent extends PositionComponent {
 
   ElementComponent({
     required this.element,
-    Vector2? position,
+    super.position,
     Vector2? size,
     Anchor? anchor,
   })  : _emojiText = TextComponent(
@@ -23,7 +22,6 @@ class ElementComponent extends PositionComponent {
           anchor: Anchor.center,
         ),
         super(
-          position: position,
           size: size ?? Vector2.all(50), // Default size
           anchor: anchor ?? Anchor.center,
         ) {

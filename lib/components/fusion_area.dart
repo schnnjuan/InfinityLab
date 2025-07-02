@@ -1,5 +1,4 @@
 import 'package:flame/components.dart';
-import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 import 'package:infinitylab/components/element_component.dart';
 import 'package:infinitylab/data/fusion_manager.dart';
@@ -8,12 +7,10 @@ class FusionArea extends RectangleComponent with HasGameRef {
   final List<ElementComponent> _elementsInArea = [];
 
   FusionArea({
-    Vector2? position,
-    Vector2? size,
+    super.position,
+    super.size,
     Paint? paint,
   }) : super(
-          position: position,
-          size: size,
           paint: paint ?? (Paint()..color = Colors.blue.withOpacity(0.3)),
         );
 

@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:infinitylab/data/fusion_manager.dart';
 
 class DiscoveryLog extends StatelessWidget {
+  const DiscoveryLog({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<FusionManager>(

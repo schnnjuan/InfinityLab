@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:infinitylab/audio/audio_manager.dart';
 import 'package:infinitylab/components/element_component.dart';
 import 'package:infinitylab/components/fusion_area.dart';
+import 'package:infinitylab/data/fusion_manager.dart';
 
 class InfinityLabGame extends FlameGame with TapCallbacks, HasCollisionDetection {
   final AudioManager audioManager = AudioManager();

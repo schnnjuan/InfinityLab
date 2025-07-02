@@ -8,7 +8,7 @@ import 'package:flame/components.dart';
 class InventoryUI extends StatelessWidget {
   final InfinityLabGame game;
 
-  const InventoryUI({Key? key, required this.game}) : super(key: key);
+  const InventoryUI({super.key, required this.game});
 
   @override
   Widget build(BuildContext context) {
