@@ -1,174 +1,163 @@
-# Infinity Lab
 
-Infinity Lab is a sci-fi sandbox fusion game where players interact in a futuristic laboratory to discover, combine, and create hundreds (or thousands) of new elements, substances, objects, and phenomena. Using an intuitive drag-and-drop mechanic, players experiment with fusions and chemical reactions ranging from basic elements to complex compounds, with an extra layer of realism in the real chemistry lab mode, simulating scientific reactions based on real data.
+<!-- INFINITY LAB README -->
 
-The game combines exploration, creativity, education, and fun in an accessible experience for all audiences, with modern interfaces, minimalist sci-fi visuals, and immersive soundscapes.
+<div align="center">
 
----
+<img src="https://i.imgur.com/2T4YJ1L.png" alt="Infinity Lab Header">
 
-## 1. Target Audience
+[![Platform](https://img.shields.io/badge/platform-Flutter%20%7C%20Flame-blue)]()
+[![License](https://img.shields.io/github/license/schnnjuan/InfinityLab?style=flat-square)]()
+[![Specter Studios](https://img.shields.io/badge/made%20by-Specter%20Studios-black)]()
 
-* Casual gamers and fans of creative sandbox games
-* Students and educators interested in chemistry and natural sciences
-* General audience interested in discovery, crafting, and simulation games
-* Mobile, web, and desktop platforms
+### 🔭 Discover. 🔬 Combine. 🧪 Create.
+_A sandbox for element fusion with a minimalist sci-fi aesthetic and chemical realism._
 
----
-
-## 2. Development Platforms
-
-* Mobile: Android and iOS (Flutter with Flame)
-* Desktop: Windows (Flutter Desktop)
-* Web: Modern browsers (Flutter Web)
+</div>
 
 ---
 
-## 3. Core Mechanics and Systems
+<div align="center">
+<img src="https://i.imgur.com/8i9b6Jb.png" alt="About the Game">
+</div>
 
-### 3.1 Core Fusion System
+**Infinity Lab** is a 2D _drag-and-drop_ game where the player explores a futuristic digital laboratory to discover **hundreds of elements and chemical reactions**, blending fantasy and real science.
+> It all starts with the four basic elements: **🌊 Water**, **🔥 Fire**, **🌍 Earth**, **💨 Air**.
 
-* **Initial base elements:** Water, Air, Earth, Fire (emoji symbols for intuitiveness)
-* **Element creation:** Combine two or more elements to generate new ones (e.g., water + fire = steam)
-* **Rules system:** Configurable combination table via JSON/script data, supporting multi-step fusions
-* **Feedback:** Visual (particles, animations), audio, and textual feedback for success or failure
-* **Combination limit:** Flexible to support hundreds to thousands of created items
-
-### 3.2 Inventory and Management
-
-* Visual inventory interface to view available elements
-* Discovery log with filters and search
-* Tag and category system for organization (e.g., organic, minerals, gases)
-* Option for users to rename elements
-
-### 3.3 Real Chemistry Lab Mode (Core Extension)
-
-* Catalog of real chemical elements (H, C, O, N, P, S, Ca, K, Na, Cl, Mg)
-* Real properties: physical states, solubility, pH, energy, chemical bond types
-* Mixing system on a workbench with virtual beakers and test tubes
-* Reaction validation based on chemical rules (acid-base, precipitation, oxidation)
-* Interactive tools: pipettes, stirrers, virtual bunsen, meters (pH, thermometer, scale)
-* Safety system: alerts for dangerous mixtures, simulated explosions, neutralization
-* Detailed experiment log with formulas, visual results, and progressive unlocking
-
-### 3.4 Missions and Challenges System
-
-* Progressive tutorial missions to teach fusion and chemistry basics
-* Free challenges to create specific combinations or solve problems (e.g., neutralize acid)
-* Reward system: unlock new elements, tools, and visuals
-
-### 3.5 Progression and Discovery System
-
-* Automatic log of discovered combinations
-* Achievements/trophies system
-* Progressive unlocking based on scientific advances and achievements
-
-### 3.6 Interface and UX System
-
-* Minimalist main interface with glassmorphism and sci-fi design
-* Intuitive drag & drop, supporting touch and mouse
-* Modular/adaptable panels (inventory, database, workbench, missions)
-* Multilingual system (EN/PT-BR initially)
-* Dark theme support and responsive layout
-
-### 3.7 Audio System
-
-* Ambient sci-fi music
-* Sound effects for interactions, fusion/reaction success/failure
-* Volume and mute controls
+> By combining them, the player unlocks new compounds, objects, and phenomena, from **mud** to **steam**, from **electricity** to **life**.
 
 ---
 
-## 4. Technical Aspects
+<div align="center">
+<img src="https://i.imgur.com/pQf8RzQ.png" alt="Core Mechanics">
+</div>
 
-### 4.1 Framework and Languages
+### 🧪 Element Fusion
+Rule-based JSON combination system, supporting thousands of unique fusions, recursive and reactive fusion, plus visual (particles), sound, and textual feedback.
 
-* **Flutter + Flame:** main development for 2D multiplatform, UI, and game logic
-* **Dart:** language for all game logic and interface
+```ascii
+     🌊         🔥
+    Water   +  Fire  →   💨 Steam
+```
 
-### 4.2 Data Structure
+### 🧰 Inventory and Interface
+Fluid Drag & Drop with touch/mouse, minimalist side panel, discovery history, and well-defined categories (gas, mineral, living, fictional, etc.).
 
-* **JSON/Hive/SQLite:** for storing elements, reactions, progress, and settings
-* Data structures for elements with chemical, visual, and sound properties
-* Simple scripting system to add/edit fusion rules without recompiling
-
-### 4.3 Rendering and Animations
-
-* Use of Flame for sprites, animations, and custom particles
-* Visual effects for reactions: color change, smoke, fire, bubbles, precipitates
-
-### 4.4 Saving and Loading
-
-* Automatic and manual save of player progress
-* Cloud backup (optional, future integration)
-* Multiple profile system
-
-### 4.5 Performance and Optimization
-
-* Continuous testing to ensure smoothness on modest mobile devices
-* Efficient memory and processing use for effects and logic
-* UI and response optimization for a responsive UX
+### 🔬 Laboratory Mode
+Real chemical reactions with ⚗️ test tubes and 🔬 physical properties. Use equipment like Bunsen burner, stirrer, pH meter, and thermometer to create mixtures and learn from controlled explosions.
 
 ---
 
-## 5. User Interface and Experience (UI/UX)
+<div align="center">
+<img src="https://i.imgur.com/x0c4t7B.png" alt="Project Structure">
+</div>
 
-### 5.1 Main Screen
-
-* Central area for experimentation and fusion, with space to drop elements
-* Side/bottom bar with inventory and available elements
-* Buttons to access discovery log, settings, tutorial, and lab mode
-
-### 5.2 Lab Workbench
-
-* Virtual table with space for multiple beakers and test tubes
-* Lab tools available via menu (pipettes, bunsen, stirrers)
-* Digital meters for pH, temperature, weight, and volume
-* Visual safety indicators (e.g., dangerous reagent levels)
-
-### 5.3 Discovery Log
-
-* Chronological list of all fusions and reactions performed
-* Option to view details and chemical formulas
-* Search and filter by category
-
-### 5.4 Hints and Help System
-
-* Contextual hints during experimentation
-* Step-by-step tutorial with "learn by playing" mode
-* FAQ and educational section about chemistry in the lab
+```bash
+InfinityLab/
+│
+├── lib/
+│   ├── main.dart
+│   ├── engine/              # Fusion engine
+│   ├── models/              # Element structure
+│   ├── ui/                  # Visual interface (Flutter widgets)
+│   └── services/            # Saving, state, etc.
+│
+├── assets/
+│   ├── audio/
+│   ├── images/
+│   └── data/
+│       └── elements.json
+│
+└── README.md
+```
 
 ---
 
-## 6. Audio and Music
+<div align="center">
+<img src="https://i.imgur.com/fN7wK9k.png" alt="Fusion Example">
+</div>
 
-* Soft sci-fi ambient soundtrack, adaptive to different situations
-* Manipulation sounds (clicks, drag, drop)
-* Chemical reaction sounds (bubbling, sparks, light explosions)
-* Audio customization options in the menu
+| 🔹 Element A | 🔸 Element B | ⚛️ Result | Category   |
+| ------------- | ------------- | --------- | ---------- |
+| Water         | Fire          | Steam     | Gas        |
+| Air           | Water         | Rain      | Phenomenon |
+| Earth         | Rain          | Mud       | Mineral    |
+| Mud           | Fire          | Brick     | Building   |
+| Fire          | Metal         | Electricity | Energy     |
+| Electricity   | Life          | Robot     | Artificial |
 
----
-
-## 📄 Roadmap
-
-See progress and tasks in [ROADMAP_en.md](./ROADMAP_en.md).
-
----
-
-
-## Final Summary
-
-**Infinity Lab** is an ambitious project that unites creativity, science, and technology to offer an innovative and educational sandbox. With modular systems, an intuitive interface, and a focus on fun and learning, the game has the potential to captivate a wide audience, from casual gamers to students and educators. The presented roadmap and structure ensure clarity for efficient and scalable development.
+> All fusions are **dynamic**, configured by `.json` files, with AI support and procedural expansion.
 
 ---
 
-## 🌟 Future Vision and Expansion Possibilities
+<div align="center">
+<img src="https://i.imgur.com/sW9tE2R.png" alt="Roadmap">
+</div>
 
-- **AI in Sandbox:** Suggest fusions based on player history and allow procedural recipe generation.
-- **Modding:** Plugins and JSON/YAML files for users to create new fusions.
-- **Advanced Lab:** Integration with open chemical APIs, realistic visual effects, and molecular structure panel.
-- **Analytics:** Internal telemetry and admin panel for dynamic balancing.
-- **Online/Multiplayer:** Real-time collaborative lab, fusion sharing, and leaderboards.
-- **Education:** Thematic learning tracks, quizzes, certification, and integration with educational platforms.
-- **Internal Editor:** Visual tool to modify and export elements, fusions, and reactions.
+| Version | Description                    | Status         |
+| ------- | ------------------------------ | -------------- |
+| `v0.1`  | Functional sandbox prototype   | ✅ Completed    |
+| `v0.5`  | Interactive chemical laboratory | 🔄 In progress |
+| `v1.0`  | Launch with campaign mode      | ⏳ Planned      |
+| `v1.1+` | Multiplayer, modding, AI       | 🧠 Research    |
 
-For full details and suggestions, see also [ROADMAP_en.md](./ROADMAP_en.md).
+---
+
+<div align="center">
+<img src="https://i.imgur.com/mZ3yH5G.png" alt="Technical Architecture">
+</div>
+
+| Component             | Technology            |
+| --------------------- | --------------------- |
+| Main Engine           | Flutter + Flame       |
+| Language              | Dart                  |
+| Backend (optional)    | Supabase              |
+| Local Storage         | Hive / SQLite         |
+| Animations and Sprites | Flame (particles, fx) |
+| Data Structure        | Modular JSON          |
+| Cross-platform Build  | Web, Android, iOS     |
+
+---
+
+<div align="center">
+<img src="https://i.imgur.com/aO7rV6F.png" alt="Contribution">
+</div>
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/schnnjuan/InfinityLab.git
+    ```
+2.  **Create a branch:**
+    ```bash
+    git checkout -b feature/your-feature
+    ```
+3.  **After changes, commit and push:**
+    ```bash
+    git commit -m "feat: your contribution"
+    git push origin feature/your-feature
+    ```
+4.  **Open a Pull Request!**
+
+> Questions? See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+<div align="center">
+<img src="https://i.imgur.com/uV8xN3D.png" alt="Future Vision">
+</div>
+
+*   **🔁 AI** for automatic fusion generation.
+*   **⚙️ Modding system** via YAML or JSON files.
+*   **🧬 Visual element editor.**
+*   **🌐 Collaborative multiplayer laboratory.**
+*   **📊 Internal analytics dashboard** for balancing.
+*   **🧪 Educational quiz** and integration with formal education.
+
+---
+
+<div align="center">
+
+*Developed with 💡 by [Specter Studios](https://github.com/schnnjuan)*
+<br>
+_Minimalism, science, and interactivity._
+
+</div>

@@ -1,174 +1,163 @@
-# Infinity Lab
 
-Infinity Lab é um jogo sandbox sci-fi de fusão de elementos, onde o jogador interage em um laboratório futurista para descobrir, combinar e criar centenas (ou milhares) de novos elementos, substâncias, objetos e fenômenos. Utilizando uma mecânica intuitiva de arrastar e soltar, o jogador experimenta fusões e reações químicas que vão desde simples elementos básicos até compostos complexos, com uma camada extra de realismo no modo laboratório de química real, que simula reações científicas com base em dados reais.
+<!-- INFINITY LAB README -->
 
-O jogo combina exploração, criatividade, educação e diversão em uma experiência acessível para todos os públicos, com interfaces modernas, visuais minimalistas sci-fi e ambientação sonora imersiva.
+<div align="center">
 
----
+<img src="https://i.imgur.com/2T4YJ1L.png" alt="Infinity Lab Header">
 
-## 1. Público-Alvo
+[![Platform](https://img.shields.io/badge/platform-Flutter%20%7C%20Flame-blue)]()
+[![License](https://img.shields.io/github/license/schnnjuan/InfinityLab?style=flat-square)]()
+[![Specter Studios](https://img.shields.io/badge/made%20by-Specter%20Studios-black)]()
 
-* Jogadores casuais e fãs de jogos sandbox criativos.
-* Estudantes e educadores interessados em química e ciências naturais.
-* Público geral interessado em jogos de descoberta, crafting e simulação.
-* Plataformas mobile, web e desktop.
+### 🔭 Descubra. 🔬 Combine. 🧪 Crie.
+_Um sandbox de fusão de elementos com uma estética sci-fi minimalista e realismo químico._
 
----
-
-## 2. Plataformas de Desenvolvimento
-
-* Mobile: Android e iOS (Flutter com Flame)
-* Desktop: Windows (Flutter Desktop)
-* Web: navegadores modernos (Flutter Web)
+</div>
 
 ---
 
-## 3. Mecânicas e Sistemas Principais
+<div align="center">
+<img src="https://i.imgur.com/8i9b6Jb.png" alt="Sobre o Jogo">
+</div>
 
-### 3.1 Sistema de Combinação (Core Fusion)
+**Infinity Lab** é um jogo 2D de _arrastar e soltar_ onde o jogador explora um laboratório digital futurista para descobrir **centenas de elementos e reações químicas**, mesclando fantasia e ciência real.
+> Tudo começa com os quatro elementos básicos: **🌊 Água**, **🔥 Fogo**, **🌍 Terra**, **💨 Ar**.
 
-* **Elementos base iniciais:** Água, Ar, Terra, Fogo (símbolos emoji para intuitividade)
-* **Criação de elementos:** Combinação de dois ou mais elementos para gerar novos (ex: água + fogo = vapor)
-* **Sistema de regras:** Tabela de combinações configurável via dados JSON/script, com suporte a múltiplas etapas de fusão
-* **Feedback:** Feedback visual (partículas, animações), sonoro e textual para sucesso ou falha
-* **Limite de combinações:** Flexível para suportar centenas a milhares de itens criados
-
-### 3.2 Inventário e Gerenciamento
-
-* Interface visual de inventário para visualizar elementos disponíveis
-* Histórico de descobertas, com filtros e buscas
-* Sistema de tags e categorias para organização (ex: orgânicos, minerais, gases)
-* Possibilidade de renomear elementos pelo usuário
-
-### 3.3 Modo Laboratório de Química Real (Extensão do Core)
-
-* Catálogo de elementos químicos reais (H, C, O, N, P, S, Ca, K, Na, Cl, Mg)
-* Propriedades reais: estados físicos, solubilidade, pH, energia, tipos de ligação química
-* Sistema de mistura em bancada com béqueres e tubos de ensaio virtuais
-* Validação de reações com base em regras químicas (ácido-base, precipitação, oxidação)
-* Ferramentas interativas: pipetas, agitadores, bunsen virtual, medidores (pHmetro, termômetro, balança)
-* Sistema de segurança: alertas para misturas perigosas, explosões simuladas, neutralização
-* Registro detalhado de experimentos com fórmulas, resultados visuais e desbloqueio progressivo
-
-### 3.4 Sistema de Missões e Desafios
-
-* Missões tutoriais progressivas para ensinar o funcionamento e conceitos básicos de fusão e química
-* Desafios livres para criar combinações específicas ou solucionar problemas (ex: neutralizar ácido)
-* Sistema de recompensas: desbloqueio de novos elementos, ferramentas e visuais
-
-### 3.5 Sistema de Progresso e Descoberta
-
-* Registro automático das combinações descobertas
-* Sistema de achievements/troféus
-* Sistema de desbloqueio progressivo baseado em avanços científicos e conquistas
-
-### 3.6 Sistema de Interface e UX
-
-* Interface principal minimalista com glassmorphism e design sci-fi
-* Drag & drop intuitivo, com suporte a toque e mouse
-* Painéis modulares e adaptáveis (inventário, banco de dados, bancada, missões)
-* Sistema multilíngue (EN/PT-BR inicial)
-* Suporte a tema escuro e responsividade para diferentes resoluções
-
-### 3.7 Sistema de Áudio
-
-* Música ambiente ambiental sci-fi
-* Efeitos sonoros para interações, sucesso/falha em fusões e reações químicas
-* Configurações para controle de volume e mute
+> Combinando-os, o jogador desbloqueia novos compostos, objetos e fenômenos, de **lama** a **vapor**, de **eletricidade** a **vida**.
 
 ---
 
-## 4. Aspectos Técnicos
+<div align="center">
+<img src="https://i.imgur.com/pQf8RzQ.png" alt="Mecânicas Principais">
+</div>
 
-### 4.1 Framework e Linguagens
+### 🧪 Fusão de Elementos
+Sistema baseado em regras de combinação JSON, com suporte a milhares de fusões únicas, fusão recursiva e reativa, além de feedback visual (partículas), sonoro e textual.
 
-* **Flutter + Flame:** desenvolvimento principal para multi-plataforma 2D, UI e lógica do jogo
-* **Dart:** linguagem para toda a lógica do jogo e interface
+```ascii
+     🌊         🔥
+    Water   +  Fire  →   💨 Steam
+```
 
-### 4.2 Estrutura de Dados
+### 🧰 Inventário e Interface
+Drag & Drop fluido com toque/mouse, painel lateral minimalista, histórico de descobertas e categorias bem definidas (gás, mineral, vivo, ficcional, etc.).
 
-* **JSON/Hive/SQLite:** para armazenamento de elementos, reações, progresso e configurações
-* Estruturas de dados para elementos com propriedades químicas, visuais e sons associados
-* Sistema de scripts simples para adicionar ou editar regras de fusão sem recompilar o jogo
-
-### 4.3 Renderização e Animações
-
-* Uso do Flame para sprites, animações e partículas customizadas
-* Efeitos visuais para reações: mudança de cor, fumaça, fogo, bolhas, precipitados
-
-### 4.4 Salvamento e Carregamento
-
-* Save automático e manual do progresso do jogador
-* Backup em nuvem (opcional, via integração futura)
-* Sistema de múltiplos perfis
-
-### 4.5 Performance e Otimização
-
-* Testes contínuos para garantir fluidez em dispositivos móveis mais modestos
-* Uso eficiente de memória e processamento para efeitos e lógica
-* Otimização da interface e respostas para UX responsiva
+### 🔬 Modo Laboratório
+Reações químicas reais com ⚗️ tubos de ensaio e 🔬 propriedades físicas. Use equipamentos como bico de Bunsen, agitador, pHmetro e termômetro para criar misturas e aprender com explosões controladas.
 
 ---
 
-## 5. Interface e Experiência do Usuário (UI/UX)
+<div align="center">
+<img src="https://i.imgur.com/x0c4t7B.png" alt="Estrutura do Projeto">
+</div>
 
-### 5.1 Tela Principal
-
-* Área central para experimentação e fusão, com espaço para soltar elementos
-* Barra lateral/inferior com inventário e elementos disponíveis
-* Botões para acessar log de descobertas, configurações, tutorial e modo laboratório
-
-### 5.2 Bancada do Laboratório
-
-* Mesa virtual com espaço para múltiplos béqueres e tubos de ensaio
-* Ferramentas de laboratório disponíveis via menu (pipetas, bunsen, agitadores)
-* Medidores digitais para pH, temperatura, peso e volume
-* Indicadores visuais de segurança (ex: níveis perigosos de reagentes)
-
-### 5.3 Log de Descobertas
-
-* Listagem cronológica de todas as fusões e reações feitas
-* Opção para visualizar detalhes e fórmulas químicas
-* Função de busca e filtro por categoria
-
-### 5.4 Sistema de Dicas e Ajuda
-
-* Dicas contextuais automáticas durante experimentação
-* Tutorial passo a passo com modo “aprenda jogando”
-* FAQ e seção educativa sobre química no laboratório
+```bash
+InfinityLab/
+│
+├── lib/
+│   ├── main.dart
+│   ├── engine/              # Motor de fusão
+│   ├── models/              # Estrutura dos elementos
+│   ├── ui/                  # Interface visual (Flutter widgets)
+│   └── services/            # Salvamento, estado, etc.
+│
+├── assets/
+│   ├── audio/
+│   ├── images/
+│   └── data/
+│       └── elements.json
+│
+└── README.md
+```
 
 ---
 
-## 6. Áudio e Música
+<div align="center">
+<img src="https://i.imgur.com/fN7wK9k.png" alt="Exemplo de Fusão">
+</div>
 
-* Trilha sonora ambiente sci-fi suave, adaptativa para diferentes situações
-* Sons de manipulação (cliques, arrastar, soltar)
-* Sons de reações químicas (borbulhar, faíscas, explosões leves)
-* Opções de personalização de áudio no menu
+| 🔹 Elemento A | 🔸 Elemento B | ⚛️ Resultado | Categoria  |
+| ------------- | ------------- | ------------ | ---------- |
+| Água          | Fogo          | Vapor        | Gás        |
+| Ar            | Água          | Chuva        | Fenômeno   |
+| Terra         | Chuva         | Lama         | Mineral    |
+| Lama          | Fogo          | Tijolo       | Construção |
+| Fogo          | Metal         | Eletricidade | Energia    |
+| Eletricidade  | Vida          | Robô         | Artificial |
 
----
-
-## 📄 Roadmap
-
-Veja o progresso e tarefas em [ROADMAP.md](./ROADMAP.md).
-
----
-
-
-## Resumo Final
-
-**Infinity Lab** é um projeto ambicioso que une criatividade, ciência e tecnologia para oferecer um sandbox inovador e educativo. Com sistemas modulares, interface intuitiva e foco na diversão e aprendizado, o jogo tem potencial para cativar um público amplo, desde jogadores casuais até estudantes e educadores. O roadmap e estrutura apresentados garantem clareza para desenvolvimento eficiente e escalável.
+> Todas as fusões são **dinâmicas**, configuradas por arquivos `.json`, com suporte a IA e expansão procedural.
 
 ---
 
-## 🌟 Visão Futura e Possibilidades de Expansão
+<div align="center">
+<img src="https://i.imgur.com/sW9tE2R.png" alt="Roadmap">
+</div>
 
-- **IA no Sandbox:** Sugerir fusões com base no histórico do jogador e permitir geração procedural de receitas.
-- **Modding:** Plugins e arquivos JSON/YAML para criação de novas fusões por usuários.
-- **Laboratório Avançado:** Integração com APIs químicas abertas, efeitos visuais realistas e painel de estrutura molecular.
-- **Analytics:** Telemetria interna e painel administrativo para balanceamento dinâmico.
-- **Online/Multiplayer:** Laboratório colaborativo em tempo real, compartilhamento de fusões e leaderboards.
-- **Educação:** Trilhas temáticas, quizzes, certificação e integração com plataformas educacionais.
-- **Editor Interno:** Ferramenta visual para modificar e exportar elementos, fusões e reações.
+| Versão  | Descrição                      | Status          |
+| ------- | ------------------------------ | --------------- |
+| `v0.1`  | Protótipo sandbox funcional    | ✅ Concluído     |
+| `v0.5`  | Laboratório químico interativo | 🔄 Em andamento |
+| `v1.0`  | Lançamento com modo campanha   | ⏳ Planejado     |
+| `v1.1+` | Multiplayer, modding, IA       | 🧠 Pesquisa     |
 
-Para detalhes completos e sugestões, veja também o [ROADMAP.md](./ROADMAP.md).
+---
+
+<div align="center">
+<img src="https://i.imgur.com/mZ3yH5G.png" alt="Arquitetura Técnica">
+</div>
+
+| Componente            | Tecnologia            |
+| --------------------- | --------------------- |
+| Engine Principal      | Flutter + Flame       |
+| Linguagem             | Dart                  |
+| Backend (opcional)    | Supabase              |
+| Armazenamento local   | Hive / SQLite         |
+| Animações e Sprites   | Flame (particles, fx) |
+| Estrutura de Dados    | JSON modular          |
+| Build multiplataforma | Web, Android, iOS     |
+
+---
+
+<div align="center">
+<img src="https://i.imgur.com/aO7rV6F.png" alt="Contribuição">
+</div>
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/schnnjuan/InfinityLab.git
+    ```
+2.  **Crie uma branch:**
+    ```bash
+    git checkout -b feature/sua-feature
+    ```
+3.  **Após as alterações, faça o commit e o push:**
+    ```bash
+    git commit -m "feat: sua contribuição"
+    git push origin feature/sua-feature
+    ```
+4.  **Abra um Pull Request!**
+
+> Dúvidas? Veja [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+---
+
+<div align="center">
+<img src="https://i.imgur.com/uV8xN3D.png" alt="Visão Futura">
+</div>
+
+*   **🔁 IA** para gerar fusões automaticamente.
+*   **⚙️ Sistema de modding** via arquivos YAML ou JSON.
+*   **🧬 Editor visual** de elementos.
+*   **🌐 Laboratório multiplayer** colaborativo.
+*   **📊 Painel de analytics** interno para balanceamento.
+*   **🧪 Quiz educativo** e integração com ensino formal.
+
+---
+
+<div align="center">
+
+*Desenvolvido com 💡 por [Specter Studios](https://github.com/schnnjuan)*
+<br>
+_Minimalismo, ciência e interatividade._
+
+</div>
