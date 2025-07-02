@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 // Define AppColors based on the provided HTML/CSS
 class AppColors {
-  static const Color background = Color(0xFF0d0d0d);
-  static const Color panelBackground = Color(0xFF121212);
-  static const Color inventoryBackground = Color(0xFF151515);
-  static const Color fusionAreaBackground = Color(0xFF1a1a1a);
-  static const Color inventoryItemBg = Color(0xFF1a1a1a);
+  static const Color background = Color(0xFF1A1A2E); // Darker background
+  static const Color panelBackground = Color(0xFF16213E); // Darker panel
+  static const Color inventoryBackground = Color(0xFF0F3460); // Darker inventory
+  static const Color fusionAreaBackground = Color(0xFF0A1128); // Even darker for fusion area
+  static const Color inventoryItemBg = Color(0xFF0A1128);
 
-  static const Color borderColor = Color(0xFF222222);
-  static const Color fusionAreaBorder = Color(0xFF333333);
+  static const Color borderColor = Color(0xFF007ACC); // Blueish border
+  static const Color fusionAreaBorder = Color(0xFF007ACC);
 
-  static const Color primaryText = Color(0xFFf0f0f0);
-  static const Color secondaryText = Color(0xFF888888); // For Fusion Area text
-  static const Color gray400 = Color(0xFFA3A3A3); // For uppercase titles
-  static const Color gray500 = Color(0xFF737373); // For info text
+  static const Color primaryText = Color(0xFFE0E0E0); // Lighter text
+  static const Color secondaryText = Color(0xFFB0B0B0); // Lighter secondary text
+  static const Color gray400 = Color(0xFF90CAF9); // Blueish gray
+  static const Color gray500 = Color(0xFF64B5F6); // Lighter blue
 }
 
 // Define AppTextStyles based on the provided HTML/CSS
