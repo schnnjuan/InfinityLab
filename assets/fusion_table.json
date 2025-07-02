@@ -1,0 +1,4 @@
+[
+  { "inputs": ["water", "fire"], "result": "steam" },
+  { "inputs": ["air", "earth"], "result": "dust" }
+]
