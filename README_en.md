@@ -1,21 +1,13 @@
 
 <!-- INFINITY LAB README -->
-
-
-[![Platform](https://img.shields.io/badge/platform-Flutter%20%7C%20Flame-blue)]()
-[![License](https://img.shields.io/github/license/schnnjuan/InfinityLab?style=flat-square)]()
-[![Specter Studios](https://imgur.com/gallery/01-lq61ixg)]()
+<div align="center">
 
 ### 🔭 Discover. 🔬 Combine. 🧪 Create.
 _A sandbox for element fusion with a minimalist sci-fi aesthetic and chemical realism._
 
-</div>
+</div
 
 ---
-
-<div align="center">
-<img src="https://imgur.com/a/02-6JnCZEt" alt="About the Game">
-</div>
 
 **Infinity Lab** is a 2D _drag-and-drop_ game where the player explores a futuristic digital laboratory to discover **hundreds of elements and chemical reactions**, blending fantasy and real science.
 > It all starts with the four basic elements: **🌊 Water**, **🔥 Fire**, **🌍 Earth**, **💨 Air**.
