@@ -7,7 +7,7 @@
 
 [![Platform](https://img.shields.io/badge/platform-Flutter%20%7C%20Flame-blue)]()
 [![License](https://img.shields.io/github/license/schnnjuan/InfinityLab?style=flat-square)]()
-[![Specter Studios](https://img.shields.io/badge/made%20by-Specter%20Studios-black)]()
+[![Specter Studios](https://imgur.com/a/lq61ixg)]()
 
 ### 🔭 Descubra. 🔬 Combine. 🧪 Crie.
 _Um sandbox de fusão de elementos com uma estética sci-fi minimalista e realismo químico._
@@ -17,7 +17,7 @@ _Um sandbox de fusão de elementos com uma estética sci-fi minimalista e realis
 ---
 
 <div align="center">
-<img src="https://i.imgur.com/8i9b6Jb.png" alt="Sobre o Jogo">
+<img src="https://imgur.com/a/6JnCZEt" alt="Sobre o Jogo">
 </div>
 
 **Infinity Lab** é um jogo 2D de _arrastar e soltar_ onde o jogador explora um laboratório digital futurista para descobrir **centenas de elementos e reações químicas**, mesclando fantasia e ciência real.
@@ -27,9 +27,6 @@ _Um sandbox de fusão de elementos com uma estética sci-fi minimalista e realis
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/pQf8RzQ.png" alt="Mecânicas Principais">
-</div>
 
 ### 🧪 Fusão de Elementos
 Sistema baseado em regras de combinação JSON, com suporte a milhares de fusões únicas, fusão recursiva e reativa, além de feedback visual (partículas), sonoro e textual.
@@ -47,9 +44,6 @@ Reações químicas reais com ⚗️ tubos de ensaio e 🔬 propriedades física
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/x0c4t7B.png" alt="Estrutura do Projeto">
-</div>
 
 ```bash
 InfinityLab/
@@ -72,9 +66,7 @@ InfinityLab/
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/fN7wK9k.png" alt="Exemplo de Fusão">
-</div>
+
 
 | 🔹 Elemento A | 🔸 Elemento B | ⚛️ Resultado | Categoria  |
 | ------------- | ------------- | ------------ | ---------- |
@@ -89,9 +81,6 @@ InfinityLab/
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/sW9tE2R.png" alt="Roadmap">
-</div>
 
 | Versão  | Descrição                      | Status          |
 | ------- | ------------------------------ | --------------- |
@@ -102,9 +91,7 @@ InfinityLab/
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/mZ3yH5G.png" alt="Arquitetura Técnica">
-</div>
+
 
 | Componente            | Tecnologia            |
 | --------------------- | --------------------- |
@@ -118,9 +105,7 @@ InfinityLab/
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/aO7rV6F.png" alt="Contribuição">
-</div>
+
 
 1.  **Clone o repositório:**
     ```bash
@@ -141,9 +126,7 @@ InfinityLab/
 
 ---
 
-<div align="center">
-<img src="https://i.imgur.com/uV8xN3D.png" alt="Visão Futura">
-</div>
+
 
 *   **🔁 IA** para gerar fusões automaticamente.
 *   **⚙️ Sistema de modding** via arquivos YAML ou JSON.
