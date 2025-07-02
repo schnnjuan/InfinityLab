@@ -1,15 +1,30 @@
 import 'package:audioplayers/audioplayers.dart';
 
 class AudioManager {
-  final AudioPlayer _audioPlayer = AudioPlayer();
+  late AudioPlayer _successPlayer;
+  late AudioPlayer _errorPlayer;
+
+  AudioManager() {
+    _successPlayer = AudioPlayer();
+    _errorPlayer = AudioPlayer();
+    _loadSounds();
+  }
+
+  Future<void> _loadSounds() async {
+    await _successPlayer.setSource(AssetSource('audio/success.wav'));
+    await _errorPlayer.setSource(AssetSource('audio/error.ogg'));
+  }
 
   Future<void> playSuccessSound() async {
-    // Usando o arquivo .wav para sucesso
-    await _audioPlayer.play(AssetSource('audio/success.wav'));
+    await _successPlayer.resume();
   }
 
   Future<void> playFailureSound() async {
-    // Usando o arquivo .ogg para falha
-    await _audioPlayer.play(AssetSource('audio/error.ogg'));
+    await _errorPlayer.resume();
+  }
+
+  void dispose() {
+    _successPlayer.dispose();
+    _errorPlayer.dispose();
   }
 }
